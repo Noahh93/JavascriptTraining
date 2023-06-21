@@ -1,0 +1,52 @@
+
+
+<Html>
+<head>
+
+</head>
+<body>
+ 
+ <table>
+  <tr>
+   <td> Enter number </td>
+   <td> <input type"text" id="numberOne"> </td> 
+  </tr> 
+  <tr>
+   <td> Result: </td>
+   <td> <input type"text" id="result" value=""> </td> 
+  </tr>
+  
+ </table>
+ <button onclick="Sum();"> SUM </button>
+
+
+
+<script type="text/javascript">
+
+	function Sum()
+	{ 
+	 
+	 txtOne = document.getElementById("numberOne").value;
+	 alert(txtOne + txtOne);
+
+	 enterNumber = parseInt(txtOne);
+	 sum = 0;
+
+	 for(i = 1; i <= enterNumber; i++)
+	 {
+	  sum = sum + i;
+		
+		
+	 }
+	 
+	 document.getElementById("result").value = sum;
+
+	}
+
+
+</script>
+
+</body>
+</Html>
+
+
