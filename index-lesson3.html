@@ -11,11 +11,14 @@
  <td><input type="text" id="number"> </td>
 </tr>
 <tr>
- <td> Output:</td>
+ <td> Result:</td>
  <td>  <div id="result"> </div>  </td>
 </tr>
+<tr>
+<td> Instructions: Show many times <br> the entered number can be divided by 2</td>
+</tr>
 </table>
-<button onclick="numberGame()"> REVERSE </button>
+<button onclick="numberGame()"> DIVIDE </button>
 
 
 <script type="text/javascript">
@@ -26,16 +29,33 @@ function numberGame()
 
 txtNumber = document.getElementById("number").value
 enterNumber = parseInt(txtNumber);
-equalToEnterNumber = enterNumber;
 
+count = 0;
 output = "";
 
-for(i = equalToEnterNumber; i >= 1; i--)
+for(i = 2; i <= enterNumber; i++)
 {
+	if(i % 2 == 0)
+	{
+	 
+	 count++
+	}
 	
-	output = output + " " + i;
-
 }
+
+/*
+while(enterNumber >= 1)
+{
+	if(enterNumber % 2 == 0)
+	{
+
+	count++;
+	}
+	enterNumber = enterNumber - 1;
+}
+*/
+
+	output = count;
 	document.getElementById("result").innerHTML = output;
 
 }
@@ -45,6 +65,8 @@ for(i = equalToEnterNumber; i >= 1; i--)
 
 </body>
 </Html>
+
+
 
 
 
