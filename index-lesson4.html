@@ -1,0 +1,116 @@
+
+<Html>
+<head>
+
+</head>
+<body>
+
+<table>
+<tr>
+ <td> Enter number: </td>
+ <td><input type="text" id="number"> </td>
+</tr>
+<tr>
+ <td> Result:</td>
+ <td>  <div id="result"> </div>  </td>
+</tr>
+<tr>
+<td> Instructions: Show many times <br> the entered number can be divided by 2</td>
+</tr>
+</table>
+<button onclick="arrayExample()"> example1 </button>
+<button onclick="arrayExample2()"> example2 </button>
+<button onclick="arrayExample3()"> example3 </button>
+
+<script type="text/javascript">
+
+function arrayExample()
+{
+
+cities = ["London", "Amsterdam", "Kabul"];
+console.log(cities);
+console.log(cities[0]);
+console.log(cities[1]);
+console.log(cities[2]);
+
+}
+
+function arrayExample2()
+{
+cities = [];
+cities[0] = "Japan";
+cities[1] = "India";
+cities[2] = "Nepal";
+
+alert(cities[0]);
+}
+
+function arrayExample3()
+{
+
+txtNumber = document.getElementById("number").value
+
+
+number = parseInt(txtNumber);
+
+
+cities = [];
+cities[0] = "Japan";
+cities[1] = "India";
+cities[2] = "Nepal";
+cities[3] = "Afghanistan";
+cities[4] = "Bangladesh";
+cities[5] = "USA";
+cities[6] = "UAE";
+cities[7] = "England";
+cities[8] = "Finland";
+cities[9] = "Denmark";
+cities[10] = "Norway";
+
+output = "";
+
+if(number < 1 || number > 10)
+{
+ alert("Only number 1 to 10 please");
+}
+else if(number >= 1 || number <= 10)
+{
+
+	// " " Finland;
+
+	for(i = number; number > 0; number--)
+	{
+	 output = output + cities[number-1];
+	 alert(output);
+	 document.getElementById("result").innerHTML = output;
+	//Finland
+	}
+	
+}
+
+
+
+}
+</script>
+
+<div> 
+
+Enter a number less than 11 in "example3" button.
+the number entered will display what's inside the array index.
+If entered number = 3    then it will display the indexes 0,1,2 in the array
+allowed numbers 1-10 anything else is not allowed and will give error"  
+
+</div>
+
+
+</body>
+</Html>
+
+
+
+
+
+
+
+
+
